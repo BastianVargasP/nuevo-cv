@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth dark" lang="es"><head>
+<html class="scroll-smooth dark" lang="es">
+<head>
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 	<title>Bastián Vargas Parrao - Fullstack JavaScript Developer</title>
 	<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;display=swap"
+	      rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap"
+	      rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+	      rel="stylesheet"/>
 	<link href="./assets/css/styles.css" rel="stylesheet"/>
 	<script id="tailwind-config">
         tailwind.config = {
@@ -154,17 +158,24 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300">
 	<div class="max-w-max-width mx-auto flex justify-between items-center px-gutter py-4">
-		<a class="font-headline-lg text-headline-lg-mobile font-bold text-primary hover:text-secondary soft-transition" href="#inicio">
+		<a class="font-headline-lg text-headline-lg-mobile font-bold text-primary hover:text-secondary soft-transition"
+		   href="#inicio">
 			Bastián Vargas Parrao
 		</a>
 		<div class="hidden md:flex items-center gap-6">
 			<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-secondary pb-1" href="#inicio">Inicio</a>
-			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#sobre-mi">Sobre mí</a>
-			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#educacion">Educación</a>
-			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#experiencia">Experiencia</a>
-			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#portafolio">Portafolio</a>
-			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#contacto">Contacto</a>
-			<button aria-label="Toggle Dark Mode" class="text-primary hover:text-secondary transition-colors focus:outline-none" id="theme-toggle">
+			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="#sobre-mi">Sobre mí</a>
+			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="#educacion">Educación</a>
+			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="#experiencia">Experiencia</a>
+			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="#portafolio">Portafolio</a>
+			<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="#contacto">Contacto</a>
+			<button aria-label="Toggle Dark Mode"
+			        class="text-primary hover:text-secondary transition-colors focus:outline-none" id="theme-toggle">
 				<span class="material-symbols-outlined hidden dark:block" id="theme-toggle-light-icon">light_mode</span>
 				<span class="material-symbols-outlined block dark:hidden" id="theme-toggle-dark-icon">dark_mode</span>
 			</button>
@@ -180,7 +191,9 @@
 </nav>
 <main class="pt-[100px] md:pt-[120px]">
 	<!-- Inicio Section -->
-	<section class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap min-h-[819px] flex flex-col justify-center relative" id="inicio">
+	<section
+			class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap min-h-[819px] flex flex-col justify-center relative"
+			id="inicio">
 		<div class="absolute inset-0 z-[-1] overflow-hidden opacity-30 pointer-events-none">
 			<div class="absolute -top-[20%] -right-[10%] w-[60%] h-[80%] rounded-full bg-gradient-to-br from-primary-fixed/40 to-transparent blur-3xl"></div>
 			<div class="absolute -bottom-[20%] -left-[10%] w-[50%] h-[70%] rounded-full bg-gradient-to-tr from-secondary-fixed/30 to-transparent blur-3xl"></div>
@@ -195,20 +208,26 @@
 					Construyendo soluciones web <span class="text-secondary">escalables</span> y eficientes.
 				</h1>
 				<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-					Hola, soy Bastián Vargas Parrao. Desarrollador Fullstack JavaScript apasionado por crear arquitecturas limpias y experiencias de usuario excepcionales. Me especializo en transformar problemas complejos en código elegante.
+					Hola, soy Bastián Vargas Parrao. Desarrollador Fullstack JavaScript apasionado por crear
+					arquitecturas limpias y experiencias de usuario excepcionales. Me especializo en transformar
+					problemas complejos en código elegante.
 				</p>
 				<div class="flex flex-wrap gap-4 pt-4">
-					<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container soft-transition font-label-md text-label-md" href="#portafolio">
+					<a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container soft-transition font-label-md text-label-md"
+					   href="#portafolio">
 						Ver mi trabajo
 					</a>
-					<a class="inline-flex items-center justify-center border-2 border-secondary text-secondary px-6 py-3 rounded hover:bg-secondary/10 soft-transition font-label-md text-label-md bg-transparent" href="#contacto">
+					<a class="inline-flex items-center justify-center border-2 border-secondary text-secondary px-6 py-3 rounded hover:bg-secondary/10 soft-transition font-label-md text-label-md bg-transparent"
+					   href="#contacto">
 						Hablemos
 					</a>
 				</div>
 			</div>
 			<div class="md:col-span-5 hidden md:block">
 				<div class="relative w-full aspect-square rounded-xl overflow-hidden ambient-shadow">
-					<img class="w-full h-full object-cover" data-alt="A professional and modern abstract representation of code or web development. Minimalist 3D isometric composition featuring floating colorful blocks, glowing lines, and abstract UI elements over a pristine white and light blue gradient background. Soft studio lighting, highly detailed, clean corporate tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf6HawktfRFC1hsqLvEEb8gfQV0dq6ZyVVpeIAsOC4VG8tA6eYq-6IMfHZkMAC6SMj_8GqzZp88wBOjpz_4NsH_93LchET-ks8d00Y5JcSFjJQKrvmpT41d_Q8Q10VklLdv2c6sRLoIxas0InRXDioZjgZ-86O0DOceUqhpjkoYa25ObGjcbMx2Uz8lw_BRUWXbVcO8wDn-xi-n-RqpnkrluQT-OCEwgkRzcqDezqqquiP3bngxuUaxg"/>
+					<img class="w-full h-full object-cover"
+					     data-alt="A professional and modern abstract representation of code or web development. Minimalist 3D isometric composition featuring floating colorful blocks, glowing lines, and abstract UI elements over a pristine white and light blue gradient background. Soft studio lighting, highly detailed, clean corporate tech aesthetic."
+					     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf6HawktfRFC1hsqLvEEb8gfQV0dq6ZyVVpeIAsOC4VG8tA6eYq-6IMfHZkMAC6SMj_8GqzZp88wBOjpz_4NsH_93LchET-ks8d00Y5JcSFjJQKrvmpT41d_Q8Q10VklLdv2c6sRLoIxas0InRXDioZjgZ-86O0DOceUqhpjkoYa25ObGjcbMx2Uz8lw_BRUWXbVcO8wDn-xi-n-RqpnkrluQT-OCEwgkRzcqDezqqquiP3bngxuUaxg"/>
 				</div>
 			</div>
 		</div>
@@ -223,10 +242,15 @@
 			<div class="lg:col-span-8 space-y-8">
 				<div class="bg-surface-container-lowest p-6 md:p-8 rounded-xl ambient-shadow border border-transparent">
 					<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-						Soy un desarrollador comprometido con la excelencia técnica y la colaboración efectiva. Creo firmemente que el mejor código no solo funciona, sino que es fácil de leer, mantener y escalar. Mi enfoque combina un pensamiento analítico riguroso con una comunicación clara para asegurar que las soluciones técnicas se alineen perfectamente con los objetivos del negocio.
+						Soy un desarrollador comprometido con la excelencia técnica y la colaboración efectiva. Creo
+						firmemente que el mejor código no solo funciona, sino que es fácil de leer, mantener y escalar.
+						Mi enfoque combina un pensamiento analítico riguroso con una comunicación clara para asegurar
+						que las soluciones técnicas se alineen perfectamente con los objetivos del negocio.
 					</p>
 					<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-						Destaco por mi proactividad para identificar áreas de mejora, mi capacidad para trabajar en equipo resolviendo problemas complejos de manera conjunta, y mi resiliencia ante desafíos técnicos.
+						Destaco por mi proactividad para identificar áreas de mejora, mi capacidad para trabajar en
+						equipo resolviendo problemas complejos de manera conjunta, y mi resiliencia ante desafíos
+						técnicos.
 					</p>
 					<h3 class="font-headline-lg text-headline-lg-mobile text-primary mt-8 mb-4">Stack Tecnológico</h3>
 					<div class="flex flex-wrap gap-3">
@@ -236,7 +260,7 @@
 						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">React</span>
 						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">Node.js</span>
 						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">Express.js</span>
-						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">SQL / NoSQL</span>
+						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">SQL</span>
 						<span class="tech-chip text-on-secondary-container px-3 py-1.5 rounded font-label-md text-label-md border border-secondary/20">Git &amp; GitHub</span>
 					</div>
 				</div>
@@ -248,7 +272,8 @@
 		<div class="max-w-max-width mx-auto px-margin-mobile md:px-gutter">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 				<div class="lg:col-span-4 sticky top-[120px]">
-					<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Educación</h2>
+					<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+						Educación</h2>
 					<div class="w-12 h-1 bg-secondary mb-6 rounded-full"></div>
 				</div>
 				<div class="lg:col-span-8 space-y-6">
@@ -256,29 +281,53 @@
 					<div class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow-hover soft-transition border border-outline-variant/30">
 						<div class="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-2">
 							<div>
-								<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Ingeniería en Informática</h3>
-								<p class="font-body-md text-body-md text-on-surface-variant font-semibold mt-1">Universidad Tecnológica de Chile INACAP</p>
+								<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Bootcamp Desarrollo
+									Fullstack JavaScript</h3>
+								<p class="font-body-md text-body-md text-on-surface-variant font-semibold mt-1">
+									Sence</p>
 							</div>
 							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md bg-surface-container px-2 py-1 rounded">
 								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
 								2018 - 2023
 							</div>
 						</div>
-						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Formación integral en desarrollo de software, arquitectura de sistemas, bases de datos y gestión de proyectos tecnológicos. Titulado con honores.</p>
+						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Programa intensivo enfocado en
+							tecnologías web modernas. Desarrollo de aplicaciones monolíticas, microservicios y bases de
+							datos</p>
 					</div>
 					<!-- Edu Item 2 -->
 					<div class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow-hover soft-transition border border-outline-variant/30">
 						<div class="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-2">
 							<div>
-								<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Bootcamp Desarrollo Fullstack JavaScript</h3>
-								<p class="font-body-md text-body-md text-on-surface-variant font-semibold mt-1">Desafío Latam</p>
+								<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Bootcamp Desarrollo
+									Frontend</h3>
+								<p class="font-body-md text-body-md text-on-surface-variant font-semibold mt-1">Desafío
+									Latam</p>
 							</div>
 							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md bg-surface-container px-2 py-1 rounded">
 								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
-								2023
+								2025 - 2026
 							</div>
 						</div>
-						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Programa intensivo enfocado en tecnologías web modernas (MERN stack). Desarrollo de aplicaciones SPA y APIs RESTful aplicando metodologías ágiles.</p>
+						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Programa enfocado en
+							tecnologías Frontend. Desarrollo de páginas web usando Bootstrap, React y consumo de JWT</p>
+					</div>
+					<!-- Edu Item 3 -->
+					<div class="bg-surface-container-lowest p-6 rounded-xl ambient-shadow-hover soft-transition border border-outline-variant/30">
+						<div class="flex flex-col md:flex-row justify-between md:items-start gap-4 mb-2">
+							<div>
+								<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Desarrollo de juegos
+									digitales</h3>
+								<p class="font-body-md text-body-md text-on-surface-variant font-semibold mt-1">
+									Universidad Andrés Bello</p>
+							</div>
+							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md bg-surface-container px-2 py-1 rounded">
+								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+								2016 - 2020
+							</div>
+						</div>
+						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Formación integral en el
+							desarrollo de videojuegos, diseño y gestión de proyectos tecnológicos.</p>
 					</div>
 				</div>
 			</div>
@@ -288,7 +337,8 @@
 	<section class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap" id="experiencia">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
 			<div class="lg:col-span-4 sticky top-[120px]">
-				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Experiencia</h2>
+				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+					Experiencia</h2>
 				<div class="w-12 h-1 bg-secondary mb-6 rounded-full"></div>
 			</div>
 			<div class="lg:col-span-8">
@@ -297,47 +347,35 @@
 					<div class="relative">
 						<div class="absolute -left-[35px] md:-left-[43px] top-1 w-5 h-5 bg-primary rounded-full border-4 border-background"></div>
 						<div class="flex flex-col md:flex-row justify-between md:items-center mb-2 gap-2">
-							<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Desarrollador Frontend (React)</h3>
+							<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Desarrollador de juegos
+								educativos</h3>
 							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md">
 								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
-								Ene 2024 - Presente
+								2022 - 2024
 							</div>
 						</div>
-						<p class="font-body-md text-body-md text-secondary font-semibold mb-3">TechNova Solutions</p>
+						<p class="font-body-md text-body-md text-secondary font-semibold mb-3">Colegio Aconcagua -
+							Quilpué</p>
 						<ul class="space-y-2 mt-4 font-body-md text-body-md text-on-surface-variant">
 							<li class="flex items-start gap-2">
 								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-								<span>Desarrollo y mantenimiento de la plataforma principal SaaS utilizando React y Redux Toolkit.</span>
+								<span>Colaboré con el productor del juego y un equipo multifuncional para planificar flujos de trabajo de desarrollo y traducir guiones educativos en juegos funcionales.</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-								<span>Optimización del rendimiento de la aplicación, reduciendo los tiempos de carga en un 40%.</span>
+								<span>Desarrollé más de 20 juegos educativos siguiendo guiones detallados, que cubren diversos temas, incluidos matemáticas, ciencias, biología, clima, animales, formas y fechas para estudiantes de educación básica.</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-								<span>Colaboración directa con el equipo de diseño UI/UX para implementar un nuevo sistema de diseño.</span>
-							</li>
-						</ul>
-					</div>
-					<!-- Exp Item 2 -->
-					<div class="relative">
-						<div class="absolute -left-[35px] md:-left-[43px] top-1 w-5 h-5 bg-surface-variant rounded-full border-4 border-background"></div>
-						<div class="flex flex-col md:flex-row justify-between md:items-center mb-2 gap-2">
-							<h3 class="font-headline-lg text-headline-lg-mobile text-primary">Desarrollador Web Junior</h3>
-							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md">
-								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
-								Mar 2023 - Dic 2023
-							</div>
-						</div>
-						<p class="font-body-md text-body-md text-secondary font-semibold mb-3">Agencia Digital Creativa</p>
-						<ul class="space-y-2 mt-4 font-body-md text-body-md text-on-surface-variant">
-							<li class="flex items-start gap-2">
-								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-								<span>Creación de landing pages interactivas y responsivas usando HTML, CSS y JavaScript Vanilla.</span>
+								<span>Programé la lógica de juego y comportamientos de objetos, implementando funciones interactivas y mecánicas educativas alineadas con los objetivos de aprendizaje.</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
-								<span>Integración de APIs de terceros (pasarelas de pago, servicios de mapas).</span>
+								<span>Optimice el rendimiento del juego al reducir el tamaño de los archivos, lo que resultó en mejores tiempos de carga y una mejor experiencia del usuario en todos los dispositivos escolares.</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">check_circle</span>
+								<span>Realicé pruebas de control de calidad, analicé los comentarios de los evaluadores y resolví errores y problemas técnicos para garantizar un juego fluido y una eficacia educativa.</span>
 							</li>
 						</ul>
 					</div>
@@ -349,24 +387,31 @@
 	<section class="bg-surface-container-low py-section-gap" id="portafolio">
 		<div class="max-w-max-width mx-auto px-margin-mobile md:px-gutter">
 			<div class="text-center mb-12">
-				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Portafolio</h2>
-				<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Una selección de mis proyectos más recientes, destacando soluciones frontend y backend.</p>
+				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+					Portafolio</h2>
+				<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Una selección de mis
+					proyectos más recientes, destacando soluciones frontend y backend.</p>
 			</div>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<!-- Project 1 -->
 				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover" data-alt="A clean, modern dashboard interface design displayed on a sleek laptop screen. The UI features data visualizations, charts, and a sidebar navigation menu in a light mode theme with teal accents. Professional corporate aesthetic, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuunft3cLP1aYH44oxRlN8Qfrkw6M_TyE7QUp-V6OvRn2dZxwyQI_3TyAsXKrl8_o0jWxhiKlcKEf2-ncrEhIzwFudaCbXghEehCm4lN9dNzA7AARzdVZBP6gy2BCp6bQj4EPXjKa2x3n2FvcTC6g_LK4K14xG4KsKsY207dF9rbTUWG8ZAACmzgXvBan-XOYlkMa84bTdo87ufz8_S5GLfhQlRL01qiPu5BWhYil54ZcjieSnNktpQ"/>
+						<img class="w-full h-full object-cover"
+						     data-alt="A clean, modern dashboard interface design displayed on a sleek laptop screen. The UI features data visualizations, charts, and a sidebar navigation menu in a light mode theme with teal accents. Professional corporate aesthetic, high resolution."
+						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuunft3cLP1aYH44oxRlN8Qfrkw6M_TyE7QUp-V6OvRn2dZxwyQI_3TyAsXKrl8_o0jWxhiKlcKEf2-ncrEhIzwFudaCbXghEehCm4lN9dNzA7AARzdVZBP6gy2BCp6bQj4EPXjKa2x3n2FvcTC6g_LK4K14xG4KsKsY207dF9rbTUWG8ZAACmzgXvBan-XOYlkMa84bTdo87ufz8_S5GLfhQlRL01qiPu5BWhYil54ZcjieSnNktpQ"/>
 					</div>
 					<div class="p-6 flex flex-col flex-grow">
 						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">E-Commerce Dashboard</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Panel de administración para tiendas online con visualización de datos en tiempo real y gestión de inventario.</p>
+						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Panel de
+							administración para tiendas online con visualización de datos en tiempo real y gestión de
+							inventario.</p>
 						<div class="flex flex-wrap gap-2 mb-6">
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">React</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Node.js</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">PostgreSQL</span>
 						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md" href="#">
+						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
+						   href="#">
 							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
 						</a>
 					</div>
@@ -374,17 +419,22 @@
 				<!-- Project 2 -->
 				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover" data-alt="A mobile app interface design showing a task management application. Clean, minimalist screens featuring lists, checkmarks, and progress bars. Light mode with soft blue and green accents. Displayed on a modern smartphone mockup. Professional tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiNwApZY7GtWrkyMURbnd1aPKX8N0GopvsTugnf4sXzjcMGHJ6lwI0qMYmyOGmSKlNO7y-CsNfrv8a6fOnviZHiFBIm9-ygGkv9ZycMJNGQlk19zzCzRq981Sc1FxMnYwOfmOhhXA0UZdiOIPytQMDlXPMci5mD1jCpR4oLiYuQNApjiVo5MjeGoct7gAP-1_S8xIZ6iOD2kMywz8xT4CYwfXWX9A2k8ILbKRn6UwdpLrr-48Kqm6EIQ"/>
+						<img class="w-full h-full object-cover"
+						     data-alt="A mobile app interface design showing a task management application. Clean, minimalist screens featuring lists, checkmarks, and progress bars. Light mode with soft blue and green accents. Displayed on a modern smartphone mockup. Professional tech aesthetic."
+						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiNwApZY7GtWrkyMURbnd1aPKX8N0GopvsTugnf4sXzjcMGHJ6lwI0qMYmyOGmSKlNO7y-CsNfrv8a6fOnviZHiFBIm9-ygGkv9ZycMJNGQlk19zzCzRq981Sc1FxMnYwOfmOhhXA0UZdiOIPytQMDlXPMci5mD1jCpR4oLiYuQNApjiVo5MjeGoct7gAP-1_S8xIZ6iOD2kMywz8xT4CYwfXWX9A2k8ILbKRn6UwdpLrr-48Kqm6EIQ"/>
 					</div>
 					<div class="p-6 flex flex-col flex-grow">
 						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">TaskMaster Pro</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Aplicación de gestión de tareas y productividad con enfoque en equipos colaborativos, sistema de roles y notificaciones en tiempo real.</p>
+						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Aplicación de
+							gestión de tareas y productividad con enfoque en equipos colaborativos, sistema de roles y
+							notificaciones en tiempo real.</p>
 						<div class="flex flex-wrap gap-2 mb-6">
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">JavaScript</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Express.js</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">MongoDB</span>
 						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md" href="#">
+						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
+						   href="#">
 							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
 						</a>
 					</div>
@@ -392,17 +442,22 @@
 				<!-- Project 3 -->
 				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover" data-alt="A beautiful real estate property listing website interface. Highlighting search filters, map integration, and grid of property cards. Clean white background with elegant typography and subtle shadow depth. Professional corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_zMXPSalRodrXys6GW0_GsMyPTNaVdm2syduj-xwkuxQivrn36gmLUNLXxjCbWy4UE00FgCyagjDsscRvaPTjJfVdoBSa-1FVaAe2RLKzN-X8tu0WGYHn_VgWcKhvjQgAcIqhZbETpQ_Zv0mpV-XNjt5ZJtBjkXInAlbDyzgT37jvHAPD0yRuhg_ypE2sXnQJSoOY_l9N1a4FjnMuaFw57SrFRZfm178NAuVCNiYwiZn_XLAYuC5seA"/>
+						<img class="w-full h-full object-cover"
+						     data-alt="A beautiful real estate property listing website interface. Highlighting search filters, map integration, and grid of property cards. Clean white background with elegant typography and subtle shadow depth. Professional corporate aesthetic."
+						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_zMXPSalRodrXys6GW0_GsMyPTNaVdm2syduj-xwkuxQivrn36gmLUNLXxjCbWy4UE00FgCyagjDsscRvaPTjJfVdoBSa-1FVaAe2RLKzN-X8tu0WGYHn_VgWcKhvjQgAcIqhZbETpQ_Zv0mpV-XNjt5ZJtBjkXInAlbDyzgT37jvHAPD0yRuhg_ypE2sXnQJSoOY_l9N1a4FjnMuaFw57SrFRZfm178NAuVCNiYwiZn_XLAYuC5seA"/>
 					</div>
 					<div class="p-6 flex flex-col flex-grow">
-						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Plataforma Inmobiliaria</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Sitio web responsivo para búsqueda de propiedades con integración de mapas interactivos y filtros avanzados.</p>
+						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Plataforma
+							Inmobiliaria</h3>
+						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Sitio web responsivo
+							para búsqueda de propiedades con integración de mapas interactivos y filtros avanzados.</p>
 						<div class="flex flex-wrap gap-2 mb-6">
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">HTML/CSS</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">React</span>
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Tailwind</span>
 						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md" href="#">
+						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
+						   href="#">
 							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
 						</a>
 					</div>
@@ -413,12 +468,15 @@
 	<!-- Contacto Section -->
 	<section class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap" id="contacto">
 		<div class="bg-primary text-on-primary rounded-xl overflow-hidden relative ambient-shadow border border-transparent">
-			<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 100% 100%, #6df5e1 0%, transparent 50%);"></div>
+			<div class="absolute inset-0 z-0 opacity-20 pointer-events-none"
+			     style="background-image: radial-gradient(circle at 100% 100%, #6df5e1 0%, transparent 50%);"></div>
 			<div class="grid grid-cols-1 lg:grid-cols-2 relative z-10">
 				<div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-					<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 text-on-primary">¿Listo para colaborar?</h2>
-					<p class="font-body-md text-body-md text-primary-fixed mb-8">
-						Si tienes un proyecto en mente o buscas un desarrollador comprometido para tu equipo, me encantaría conversar contigo.
+					<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 text-on-primary">¿Listo
+						para colaborar?</h2>
+					<p class="font-body-md text-body-md text-on-primary mb-8">
+						Si tienes un proyecto en mente o buscas un desarrollador comprometido para tu equipo, me
+						encantaría conversar contigo.
 					</p>
 					<div class="space-y-6">
 						<div class="flex items-center gap-4">
@@ -426,8 +484,9 @@
 								<span class="material-symbols-outlined">mail</span>
 							</div>
 							<div>
-								<p class="font-label-md text-label-md text-primary-fixed mb-1">Email</p>
-								<a class="font-body-md text-body-md hover:text-secondary-container transition-colors" href="mailto:contacto@bastianvargas.dev">contacto@bastianvargas.dev</a>
+								<p class="font-label-md text-label-md text-on-primary mb-1">Email</p>
+								<a class="font-body-md text-body-md hover:text-secondary-container transition-colors"
+								   href="mailto:bastian.vargas.bv.bv@gmail.com">bastian.vargas.bv.bv@gmail.com</a>
 							</div>
 						</div>
 						<div class="flex items-center gap-4">
@@ -435,8 +494,8 @@
 								<span class="material-symbols-outlined">phone</span>
 							</div>
 							<div>
-								<p class="font-label-md text-label-md text-primary-fixed mb-1">Teléfono</p>
-								<a class="font-body-md text-body-md hover:text-secondary-container transition-colors" href="tel:+56912345678">+56 9 1234 5678</a>
+								<p class="font-label-md text-label-md text-on-primary mb-1">Teléfono</p>
+								<p class="font-body-md text-body-md">+56 9 62368769</p>
 							</div>
 						</div>
 						<div class="flex items-center gap-4">
@@ -444,7 +503,7 @@
 								<span class="material-symbols-outlined">location_on</span>
 							</div>
 							<div>
-								<p class="font-label-md text-label-md text-primary-fixed mb-1">Ubicación</p>
+								<p class="font-label-md text-label-md text-on-primary mb-1">Ubicación</p>
 								<p class="font-body-md text-body-md">Santiago, Chile (Remoto / Híbrido)</p>
 							</div>
 						</div>
@@ -454,18 +513,25 @@
 					<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-6">Envíame un mensaje</h3>
 					<form class="space-y-4">
 						<div>
-							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="name">Nombre completo</label>
-							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all" id="name" placeholder="Juan Pérez" type="text"/>
+							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="name">Nombre
+								completo</label>
+							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all"
+							       id="name" placeholder="Juan Pérez" type="text"/>
 						</div>
 						<div>
-							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Correo electrónico</label>
-							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all" id="email" placeholder="juan@ejemplo.com" type="email"/>
+							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Correo
+								electrónico</label>
+							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all"
+							       id="email" placeholder="juan@ejemplo.com" type="email"/>
 						</div>
 						<div>
 							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="message">Mensaje</label>
-							<textarea class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all resize-none" id="message" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+							<textarea
+									class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all resize-none"
+									id="message" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
 						</div>
-						<button class="w-full bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container soft-transition font-label-md text-label-md mt-4" type="submit">
+						<button class="w-full bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container soft-transition font-label-md text-label-md mt-4"
+						        type="submit">
 							Enviar mensaje
 						</button>
 					</form>
@@ -481,14 +547,16 @@
 			Bastián Vargas Parrao
 		</div>
 		<div class="font-label-md text-label-md text-on-surface-variant text-center md:text-left">
-			© 2024 Bastián Vargas Parrao. Fullstack JavaScript Developer.
+			© 2026 Bastián Vargas Parrao. Desarrollador Fullstack JavaScript.
 		</div>
 		<div class="flex items-center gap-6">
-			<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
-			<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
-			<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+			<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+			   href="https://www.linkedin.com/in/bastian-vargas-parrao/" target="_blank">LinkedIn</a>
+			<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors"
+			   href="https://github.com/BastianVargasP" target="_blank">GitHub</a>
 		</div>
 	</div>
 </footer>
 <script src="assets/js/scripts.js"></script>
-</body></html>
+</body>
+</html>
