@@ -14,6 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
 	      rel="stylesheet"/>
 	<link href="./assets/css/styles.css" rel="stylesheet"/>
+	<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 	<script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -158,7 +159,7 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300">
 	<div class="max-w-max-width mx-auto flex justify-between items-center px-gutter py-4">
-		<a class="font-headline-lg text-headline-lg-mobile font-bold text-primary hover:text-secondary soft-transition"
+		<a class="font-headline-lg text-headline-lg-mobile font-bold text-primary hover:text-secondary soft-transition z-50 relative"
 		   href="#inicio">
 			Bastián Vargas Parrao
 		</a>
@@ -179,16 +180,48 @@
 				<span class="material-symbols-outlined hidden dark:block" id="theme-toggle-light-icon">light_mode</span>
 				<span class="material-symbols-outlined block dark:hidden" id="theme-toggle-dark-icon">dark_mode</span>
 			</button>
+			<a href="./assets/cv/CV-BastianVargas.pdf" download="CV-BastianVargas.pdf">
 			<button class="hidden md:flex items-center justify-center bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md hover:bg-primary-container soft-transition cursor-pointer transition-transform active:scale-95">
 				Descargar CV
 			</button>
+			</a>
 		</div>
 		<!-- Mobile Menu Button -->
-		<button aria-label="Menu" class="md:hidden text-primary">
-			<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
-		</button>
+		<div class="md:hidden flex items-center gap-4 z-50 relative">
+			<button aria-label="Toggle Dark Mode Mobile"
+			        class="text-primary hover:text-secondary transition-colors focus:outline-none"
+			        id="theme-toggle-mobile">
+				<span class="material-symbols-outlined hidden dark:block"
+				      id="theme-toggle-light-icon-mobile">light_mode</span>
+				<span class="material-symbols-outlined block dark:hidden"
+				      id="theme-toggle-dark-icon-mobile">dark_mode</span>
+			</button>
+			<button aria-label="Menu" class="text-primary" id="mobile-menu-btn">
+				<span class="material-symbols-outlined" id="mobile-menu-icon"
+				      style="font-variation-settings: 'FILL' 0;">menu</span>
+			</button>
+		</div>
 	</div>
 </nav>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-40 bg-surface md:hidden flex flex-col items-center justify-center gap-8 px-gutter pt-20 pb-8 pointer-events-none"
+     id="mobile-menu">
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#inicio">Inicio</a>
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#sobre-mi">Sobre mí</a>
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#educacion">Educación</a>
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#experiencia">Experiencia</a>
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#portafolio">Portafolio</a>
+	<a class="mobile-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="#contacto">Contacto</a>
+	<button class="flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:bg-primary-container soft-transition cursor-pointer w-full max-w-[200px]">
+		Descargar CV
+	</button>
+</div>
 <main class="pt-[100px] md:pt-[120px]">
 	<!-- Inicio Section -->
 	<section
@@ -235,7 +268,7 @@
 	<!-- Sobre Mí Section -->
 	<section class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap" id="sobre-mi">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-			<div class="lg:col-span-4 sticky top-[120px]">
+			<div class="lg:col-span-4 top-[120px]">
 				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Sobre mí</h2>
 				<div class="w-12 h-1 bg-secondary mb-6 rounded-full"></div>
 			</div>
@@ -271,7 +304,7 @@
 	<section class="bg-surface-container-low py-section-gap" id="educacion">
 		<div class="max-w-max-width mx-auto px-margin-mobile md:px-gutter">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-				<div class="lg:col-span-4 sticky top-[120px]">
+				<div class="lg:col-span-4 top-[120px]">
 					<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
 						Educación</h2>
 					<div class="w-12 h-1 bg-secondary mb-6 rounded-full"></div>
@@ -288,7 +321,7 @@
 							</div>
 							<div class="inline-flex items-center gap-1 text-outline font-label-md text-label-md bg-surface-container px-2 py-1 rounded">
 								<span class="material-symbols-outlined text-[16px]">calendar_today</span>
-								2018 - 2023
+								2026
 							</div>
 						</div>
 						<p class="font-body-md text-body-md text-on-surface-variant mt-4">Programa intensivo enfocado en
@@ -336,7 +369,7 @@
 	<!-- Experiencia Section -->
 	<section class="max-w-max-width mx-auto px-margin-mobile md:px-gutter py-section-gap" id="experiencia">
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-			<div class="lg:col-span-4 sticky top-[120px]">
+			<div class="lg:col-span-4 top-[120px]">
 				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
 					Experiencia</h2>
 				<div class="w-12 h-1 bg-secondary mb-6 rounded-full"></div>
@@ -398,20 +431,17 @@
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
 						<img class="w-full h-full object-cover"
 						     data-alt="A clean, modern dashboard interface design displayed on a sleek laptop screen. The UI features data visualizations, charts, and a sidebar navigation menu in a light mode theme with teal accents. Professional corporate aesthetic, high resolution."
-						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuunft3cLP1aYH44oxRlN8Qfrkw6M_TyE7QUp-V6OvRn2dZxwyQI_3TyAsXKrl8_o0jWxhiKlcKEf2-ncrEhIzwFudaCbXghEehCm4lN9dNzA7AARzdVZBP6gy2BCp6bQj4EPXjKa2x3n2FvcTC6g_LK4K14xG4KsKsY207dF9rbTUWG8ZAACmzgXvBan-XOYlkMa84bTdo87ufz8_S5GLfhQlRL01qiPu5BWhYil54ZcjieSnNktpQ"/>
+						     src="./assets/img/covid.png"/>
 					</div>
 					<div class="p-6 flex flex-col flex-grow">
-						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">E-Commerce Dashboard</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Panel de
-							administración para tiendas online con visualización de datos en tiempo real y gestión de
-							inventario.</p>
+						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Explorador de datos</h3>
+						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Página web para consultar datos actualizados de COVID-19 a nivel mundial, continental y por país, mediante cifras, comparaciones y gráficos interactivos.</p>
 						<div class="flex flex-wrap gap-2 mb-6">
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">React</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Node.js</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">PostgreSQL</span>
+							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">HTML/CSS</span>
+							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">JavaScript</span>
+							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Tailwind</span>
 						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
-						   href="#">
+						<a class="inline-flex items-center justify-center w-full bg-surface-container-high text-primary px-4 py-2 rounded hover:bg-surface-container-highest soft-transition font-label-md text-label-md" href="https://bastianvargasp.github.io/Hackaton-COVID-19-Explorador-de-Datos/" target="_blank">
 							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
 						</a>
 					</div>
@@ -421,43 +451,16 @@
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
 						<img class="w-full h-full object-cover"
 						     data-alt="A mobile app interface design showing a task management application. Clean, minimalist screens featuring lists, checkmarks, and progress bars. Light mode with soft blue and green accents. Displayed on a modern smartphone mockup. Professional tech aesthetic."
-						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiNwApZY7GtWrkyMURbnd1aPKX8N0GopvsTugnf4sXzjcMGHJ6lwI0qMYmyOGmSKlNO7y-CsNfrv8a6fOnviZHiFBIm9-ygGkv9ZycMJNGQlk19zzCzRq981Sc1FxMnYwOfmOhhXA0UZdiOIPytQMDlXPMci5mD1jCpR4oLiYuQNApjiVo5MjeGoct7gAP-1_S8xIZ6iOD2kMywz8xT4CYwfXWX9A2k8ILbKRn6UwdpLrr-48Kqm6EIQ"/>
+						     src="./assets/img/extensiones.png"/>
 					</div>
 					<div class="p-6 flex flex-col flex-grow">
-						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">TaskMaster Pro</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Aplicación de
-							gestión de tareas y productividad con enfoque en equipos colaborativos, sistema de roles y
-							notificaciones en tiempo real.</p>
-						<div class="flex flex-wrap gap-2 mb-6">
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">JavaScript</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Express.js</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">MongoDB</span>
-						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
-						   href="#">
-							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
-						</a>
-					</div>
-				</div>
-				<!-- Project 3 -->
-				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
-					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover"
-						     data-alt="A beautiful real estate property listing website interface. Highlighting search filters, map integration, and grid of property cards. Clean white background with elegant typography and subtle shadow depth. Professional corporate aesthetic."
-						     src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_zMXPSalRodrXys6GW0_GsMyPTNaVdm2syduj-xwkuxQivrn36gmLUNLXxjCbWy4UE00FgCyagjDsscRvaPTjJfVdoBSa-1FVaAe2RLKzN-X8tu0WGYHn_VgWcKhvjQgAcIqhZbETpQ_Zv0mpV-XNjt5ZJtBjkXInAlbDyzgT37jvHAPD0yRuhg_ypE2sXnQJSoOY_l9N1a4FjnMuaFw57SrFRZfm178NAuVCNiYwiZn_XLAYuC5seA"/>
-					</div>
-					<div class="p-6 flex flex-col flex-grow">
-						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Plataforma
-							Inmobiliaria</h3>
-						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Sitio web responsivo
-							para búsqueda de propiedades con integración de mapas interactivos y filtros avanzados.</p>
+						<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Lista de extensiones</h3>
+						<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Página web para gestionar extensiones, permitiendo activarlas, desactivarlas, filtrarlas y eliminarlas de forma sencilla.</p>
 						<div class="flex flex-wrap gap-2 mb-6">
 							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">HTML/CSS</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">React</span>
-							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">Tailwind</span>
+							<span class="text-[12px] font-semibold bg-surface-container px-2 py-1 rounded text-on-surface-variant">JavaScript</span>
 						</div>
-						<a class="inline-flex items-center justify-center w-full bg-primary/10 text-primary px-4 py-2 rounded hover:bg-primary/20 soft-transition font-label-md text-label-md"
-						   href="#">
+						<a class="inline-flex items-center justify-center w-full bg-surface-container-high text-primary px-4 py-2 rounded hover:bg-surface-container-highest soft-transition font-label-md text-label-md" href="https://riast96.github.io/Browser-extension-manager-UI/" target="_blank">
 							Ver proyecto <span class="material-symbols-outlined ml-2 text-[18px]">arrow_outward</span>
 						</a>
 					</div>
@@ -504,14 +507,15 @@
 							</div>
 							<div>
 								<p class="font-label-md text-label-md text-on-primary mb-1">Ubicación</p>
-								<p class="font-body-md text-body-md">Santiago, Chile (Remoto / Híbrido)</p>
+								<p class="font-body-md text-body-md">Lo Miranda, Doñihue, Chile</p>
+								<p class="font-body-md text-body-md">(Remoto / Híbrido)</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="p-8 md:p-12 lg:p-16 bg-surface text-on-surface">
 					<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-6">Envíame un mensaje</h3>
-					<form class="space-y-4">
+					<form class="space-y-4" action="https://formsubmit.co/bastian.vargas.bv.bv@gmail.com" method="POST">
 						<div>
 							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="name">Nombre
 								completo</label>
@@ -546,7 +550,7 @@
 		<div class="font-headline-lg text-headline-lg-mobile text-primary">
 			Bastián Vargas Parrao
 		</div>
-		<div class="font-label-md text-label-md text-on-surface-variant text-center md:text-left">
+		<div class="font-label-md text-label-md text-on-surface-variant text-center md:text-center">
 			© 2026 Bastián Vargas Parrao. Desarrollador Fullstack JavaScript.
 		</div>
 		<div class="flex items-center gap-6">

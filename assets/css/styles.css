@@ -120,3 +120,14 @@ html.dark {
 .tech-chip {
     background-color: rgba(20, 184, 166, 0.1);
 }
+
+/* Mobile menu transitions */
+#mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+#mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+}
