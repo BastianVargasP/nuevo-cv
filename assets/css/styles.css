@@ -1,0 +1,122 @@
+:root {
+    /* Light mode variables (DESIGN_SYSTEM_1 equivalent mapping) */
+    --color-outline-variant: #c1c7ce;
+    --color-primary: #1e40af;
+    --color-surface-container-highest: #e1e2e8;
+    --color-surface-variant: #e1e2e8;
+    --color-on-secondary-fixed-variant: #3a4858;
+    --color-on-tertiary: #ffffff;
+    --color-on-tertiary-fixed: #111c2b;
+    --color-on-tertiary-fixed-variant: #3b4858;
+    --color-secondary-fixed-dim: #bbc7db;
+    --color-inverse-primary: #a7c8ff;
+    --color-on-primary-fixed-variant: #004787;
+    --color-secondary-container: #d8e3f8;
+    --color-tertiary: #525f70;
+    --color-surface-tint: #1e40af;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-secondary-fixed: #0d1d2f;
+    --color-on-error: #ffffff;
+    --color-surface-bright: #f7f9fb;
+    --color-surface-container-low: #f2f4f6;
+    --color-on-surface: #191c20;
+    --color-primary-fixed-dim: #a7c8ff;
+    --color-tertiary-fixed-dim: #bec7db;
+    --color-primary-container: #d5e3ff;
+    --color-inverse-on-surface: #f0f0f4;
+    --color-error-container: #ffdad6;
+    --color-tertiary-fixed: #dae3f8;
+    --color-on-surface-variant: #43474e;
+    --color-surface-container-high: #e7e8ee;
+    --color-inverse-surface: #2e3035;
+    --color-on-tertiary-container: #0f1c2b;
+    --color-primary-fixed: #d5e3ff;
+    --color-on-error-container: #410002;
+    --color-on-primary-fixed: #001b3f;
+    --color-on-background: #191c20;
+    --color-background: #fdfdfd;
+    --color-surface-dim: #d8dadc;
+    --color-error: #ba1a1a;
+    --color-secondary-fixed: #d6e3ff;
+    --color-on-primary: #ffffff;
+    --color-on-secondary: #ffffff;
+    --color-on-secondary-container: #121c2b;
+    --color-outline: #73777f;
+    --color-surface-container: #eceef4;
+    --color-tertiary-container: #dae3f8;
+    --color-secondary: #535f70;
+    --color-on-primary-container: #001b3f;
+    --color-surface: #f7f9fb;
+}
+
+html.dark {
+    /* Dark mode variables (DESIGN_SYSTEM_2 equivalent mapping) */
+    --color-outline-variant: #414751;
+    --color-primary: #a4c9ff;
+    --color-surface-container-highest: #2d3449;
+    --color-surface-variant: #2d3449;
+    --color-on-secondary-fixed-variant: #3a485c;
+    --color-on-tertiary: #263143;
+    --color-on-tertiary-fixed: #111c2d;
+    --color-on-tertiary-fixed-variant: #3c475a;
+    --color-secondary-fixed-dim: #b9c7e0;
+    --color-inverse-primary: #0060ac;
+    --color-on-primary-fixed-variant: #004883;
+    --color-secondary-container: #3c4a5e;
+    --color-tertiary: #bcc7de;
+    --color-surface-tint: #a4c9ff;
+    --color-surface-container-lowest: #060e20;
+    --color-on-secondary-fixed: #0d1c2f;
+    --color-on-error: #690005;
+    --color-surface-bright: #31394d;
+    --color-surface-container-low: #131b2e;
+    --color-on-surface: #dae2fd;
+    --color-primary-fixed-dim: #a4c9ff;
+    --color-tertiary-fixed-dim: #bcc7de;
+    --color-primary-container: #60a5fa;
+    --color-inverse-on-surface: #283044;
+    --color-error-container: #93000a;
+    --color-tertiary-fixed: #d8e3fb;
+    --color-on-surface-variant: #c1c7d3;
+    --color-surface-container-high: #222a3d;
+    --color-inverse-surface: #dae2fd;
+    --color-on-tertiary-container: #2e394c;
+    --color-primary-fixed: #d4e3ff;
+    --color-on-error-container: #ffdad6;
+    --color-on-primary-fixed: #001c39;
+    --color-on-background: #dae2fd;
+    --color-background: #0b1326;
+    --color-surface-dim: #0b1326;
+    --color-error: #ffb4ab;
+    --color-secondary-fixed: #d5e3fd;
+    --color-on-primary: #00315d;
+    --color-on-secondary: #233144;
+    --color-on-secondary-container: #abb9d2;
+    --color-outline: #8b919d;
+    --color-surface-container: #171f33;
+    --color-tertiary-container: #98a3ba;
+    --color-secondary: #b9c7e0;
+    --color-on-primary-container: #003a6b;
+    --color-surface: #0b1326;
+}
+
+
+.ambient-shadow {
+    box-shadow: 0 20px 40px -10px rgba(0, 35, 111, 0.05);
+}
+.dark .ambient-shadow {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+.ambient-shadow-hover:hover {
+    box-shadow: 0 30px 60px -15px rgba(0, 35, 111, 0.08);
+    transform: translateY(-2px);
+}
+.dark .ambient-shadow-hover:hover {
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+}
+.soft-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tech-chip {
+    background-color: rgba(20, 184, 166, 0.1);
+}
