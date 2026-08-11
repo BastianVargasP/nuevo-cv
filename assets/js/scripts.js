@@ -62,6 +62,81 @@ themeToggleBtns.forEach(btn => {
     }
 });
 
+// Contact Form Validation
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    const fields = ['name', 'email', 'message'].map(id => ({
+        input: document.getElementById(id),
+        error: document.getElementById(`${id}-error`)
+    }));
+
+    const errorBorderClasses = ['border-error', 'focus:border-error', 'focus:ring-error'];
+
+    function setFieldError(field, message) {
+        field.input.classList.add(...errorBorderClasses);
+        field.error.textContent = message;
+        field.error.classList.remove('hidden');
+    }
+
+    function clearFieldError(field) {
+        field.input.classList.remove(...errorBorderClasses);
+        field.error.classList.add('hidden');
+    }
+
+    function validateField(field) {
+        const value = field.input.value.trim();
+
+        if (value === '') {
+            setFieldError(field, field.error.dataset.defaultMessage || field.error.textContent);
+            return false;
+        }
+
+        if (field.input.type === 'email') {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(value)) {
+                setFieldError(field, 'Por favor ingresa un correo electrónico válido.');
+                return false;
+            }
+        }
+
+        clearFieldError(field);
+        return true;
+    }
+
+    // Store the default error message for each field before any edits happen
+    fields.forEach(field => {
+        field.error.dataset.defaultMessage = field.error.textContent;
+    });
+
+    // Validate as the user leaves a field, and re-validate live once an error is showing
+    fields.forEach(field => {
+        field.input.addEventListener('blur', () => validateField(field));
+        field.input.addEventListener('input', () => {
+            if (!field.input.classList.contains('border-error')) return;
+            validateField(field);
+        });
+    });
+
+    contactForm.addEventListener('submit', (event) => {
+        let isValid = true;
+        let firstInvalidField = null;
+
+        fields.forEach(field => {
+            const fieldIsValid = validateField(field);
+            if (!fieldIsValid) {
+                isValid = false;
+                if (!firstInvalidField) firstInvalidField = field.input;
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+            firstInvalidField.focus();
+        }
+    });
+}
+
 // Mobile Menu Functionality
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');

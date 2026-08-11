@@ -515,24 +515,27 @@
 				</div>
 				<div class="p-8 md:p-12 lg:p-16 bg-surface text-on-surface">
 					<h3 class="font-headline-lg text-headline-lg-mobile text-primary mb-6">Envíame un mensaje</h3>
-					<form class="space-y-4" action="https://formsubmit.co/bastian.vargas.bv.bv@gmail.com" method="POST">
+					<form class="space-y-4" id="contact-form" action="https://formsubmit.co/07a8d1a4a7e71a5806b628957b3854cd" method="POST" novalidate>
 						<div>
 							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="name">Nombre
 								completo</label>
 							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all"
-							       id="name" placeholder="Juan Pérez" type="text"/>
+							       id="name" name="name" placeholder="Juan Pérez" type="text" required/>
+							<p class="hidden mt-1 text-[13px] text-error" id="name-error">Por favor ingresa tu nombre completo.</p>
 						</div>
 						<div>
 							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Correo
 								electrónico</label>
 							<input class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all"
-							       id="email" placeholder="juan@ejemplo.com" type="email"/>
+							       id="email" name="email" placeholder="juan@ejemplo.com" type="email" required/>
+							<p class="hidden mt-1 text-[13px] text-error" id="email-error">Por favor ingresa un correo electrónico válido.</p>
 						</div>
 						<div>
 							<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="message">Mensaje</label>
 							<textarea
 									class="w-full bg-surface-container-lowest border border-outline-variant/50 rounded px-4 py-3 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md transition-all resize-none"
-									id="message" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+									id="message" name="message" placeholder="Cuéntame sobre tu proyecto..." rows="4" required></textarea>
+							<p class="hidden mt-1 text-[13px] text-error" id="message-error">Por favor escribe un mensaje.</p>
 						</div>
 						<button class="w-full bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container soft-transition font-label-md text-label-md mt-4"
 						        type="submit">
