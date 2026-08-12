@@ -1,56 +1,69 @@
-// Simple active state observer for navigation
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav .hidden a');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-secondary', 'pb-1');
-        link.classList.add('text-on-surface-variant');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.remove('text-on-surface-variant');
-            link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-secondary', 'pb-1');
-        }
-    });
+// Todo el código depende de elementos del header/footer compartidos,
+// así que se inicializa recién cuando partials.js confirma que ya están en el DOM.
+document.addEventListener('partials:loaded', () => {
+    initScrollSpy();
+    initThemeToggle();
+    initContactForm();
+    initMobileMenu();
 });
 
-// Theme Toggle Functionality
-const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
-const themeToggleDarkIcons = [document.getElementById('theme-toggle-dark-icon'), document.getElementById('theme-toggle-dark-icon-mobile')];
-const themeToggleLightIcons = [document.getElementById('theme-toggle-light-icon'), document.getElementById('theme-toggle-light-icon-mobile')];
-const htmlElement = document.documentElement;
+// Resalta el enlace de nav correspondiente a la sección visible (solo en index.html)
+function initScrollSpy() {
+    if (document.body.dataset.page !== 'index') return;
 
-// Initialize theme from local storage or system preference
-function initTheme() {
-    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        htmlElement.classList.add('dark');
-        themeToggleLightIcons.forEach(icon => icon.classList.remove('hidden'));
-        themeToggleDarkIcons.forEach(icon => icon.classList.add('hidden'));
-    } else {
-        htmlElement.classList.remove('dark');
-        themeToggleLightIcons.forEach(icon => icon.classList.add('hidden'));
-        themeToggleDarkIcons.forEach(icon => icon.classList.remove('hidden'));
-    }
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('[data-nav]');
+    if (!sections.length || !navLinks.length) return;
+
+    window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            const isMobile = link.classList.contains('mobile-link');
+            link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-secondary', 'pb-1');
+            link.classList.add('text-on-surface-variant');
+            if (link.dataset.nav === current) {
+                link.classList.remove('text-on-surface-variant');
+                link.classList.add('text-primary', 'font-bold');
+                if (!isMobile) link.classList.add('border-b-2', 'border-secondary', 'pb-1');
+            }
+        });
+    });
 }
 
-initTheme();
+// Alterna modo claro/oscuro y persiste la preferencia en localStorage
+function initThemeToggle() {
+    const themeToggleBtns = [document.getElementById('theme-toggle'), document.getElementById('theme-toggle-mobile')];
+    const themeToggleDarkIcons = [document.getElementById('theme-toggle-dark-icon'), document.getElementById('theme-toggle-dark-icon-mobile')];
+    const themeToggleLightIcons = [document.getElementById('theme-toggle-light-icon'), document.getElementById('theme-toggle-light-icon-mobile')];
+    const htmlElement = document.documentElement;
 
-themeToggleBtns.forEach(btn => {
-    if(btn) {
-        btn.addEventListener('click', function() {
-            // toggle icons
-            themeToggleDarkIcons.forEach(icon => icon.classList.toggle('hidden'));
-            themeToggleLightIcons.forEach(icon => icon.classList.toggle('hidden'));
+    function applyStoredTheme() {
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+            themeToggleLightIcons.forEach(icon => icon && icon.classList.remove('hidden'));
+            themeToggleDarkIcons.forEach(icon => icon && icon.classList.add('hidden'));
+        } else {
+            htmlElement.classList.remove('dark');
+            themeToggleLightIcons.forEach(icon => icon && icon.classList.add('hidden'));
+            themeToggleDarkIcons.forEach(icon => icon && icon.classList.remove('hidden'));
+        }
+    }
 
-            // toggle dark class
+    applyStoredTheme();
+
+    themeToggleBtns.forEach(btn => {
+        if (!btn) return;
+        btn.addEventListener('click', function () {
+            themeToggleDarkIcons.forEach(icon => icon && icon.classList.toggle('hidden'));
+            themeToggleLightIcons.forEach(icon => icon && icon.classList.toggle('hidden'));
+
             if (htmlElement.classList.contains('dark')) {
                 htmlElement.classList.remove('dark');
                 localStorage.setItem('theme', 'light');
@@ -59,13 +72,14 @@ themeToggleBtns.forEach(btn => {
                 localStorage.setItem('theme', 'dark');
             }
         });
-    }
-});
+    });
+}
 
-// Contact Form Validation
-const contactForm = document.getElementById('contact-form');
+// Validación del formulario de contacto (solo existe en index.html)
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (!contactForm) return;
 
-if (contactForm) {
     const fields = ['name', 'email', 'message'].map(id => ({
         input: document.getElementById(id),
         error: document.getElementById(`${id}-error`)
@@ -104,12 +118,12 @@ if (contactForm) {
         return true;
     }
 
-    // Store the default error message for each field before any edits happen
+    // Guarda el mensaje de error por defecto de cada campo antes de cualquier edición
     fields.forEach(field => {
         field.error.dataset.defaultMessage = field.error.textContent;
     });
 
-    // Validate as the user leaves a field, and re-validate live once an error is showing
+    // Valida al salir de un campo, y re-valida en vivo una vez que hay un error visible
     fields.forEach(field => {
         field.input.addEventListener('blur', () => validateField(field));
         field.input.addEventListener('input', () => {
@@ -137,35 +151,35 @@ if (contactForm) {
     });
 }
 
-// Mobile Menu Functionality
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-const mobileLinks = document.querySelectorAll('.mobile-link');
-let isMenuOpen = false;
+// Apertura/cierre del menú móvil
+function initMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+    let isMenuOpen = false;
 
-function toggleMenu() {
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-        mobileMenu.classList.add('open');
-        mobileMenu.classList.remove('pointer-events-none');
-        mobileMenuIcon.innerText = 'close';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-    } else {
-        mobileMenu.classList.remove('open');
-        mobileMenu.classList.add('pointer-events-none');
-        mobileMenuIcon.innerText = 'menu';
-        document.body.style.overflow = '';
+    if (!mobileMenuBtn || !mobileMenu || !mobileMenuIcon) return;
+
+    function toggleMenu() {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+            mobileMenu.classList.add('open');
+            mobileMenu.classList.remove('pointer-events-none');
+            mobileMenuIcon.innerText = 'close';
+            document.body.style.overflow = 'hidden'; // Evita el scroll con el menú abierto
+        } else {
+            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('pointer-events-none');
+            mobileMenuIcon.innerText = 'menu';
+            document.body.style.overflow = '';
+        }
     }
-}
 
-if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', toggleMenu);
-}
 
-// Close menu when clicking a link
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (isMenuOpen) toggleMenu();
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) toggleMenu();
+        });
     });
-});
+}

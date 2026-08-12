@@ -1,0 +1,67 @@
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300">
+	<div class="max-w-max-width mx-auto flex justify-between items-center px-gutter py-4">
+		<a class="font-headline-lg text-headline-lg-mobile font-bold text-primary hover:text-secondary soft-transition z-50 relative"
+		   href="index.html#inicio">
+			Bastián Vargas Parrao
+		</a>
+		<div class="hidden md:flex items-center gap-6">
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="index.html#inicio" data-nav="inicio">Inicio</a>
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="index.html#sobre-mi" data-nav="sobre-mi">Sobre mí</a>
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="index.html#educacion" data-nav="educacion">Educación</a>
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="index.html#experiencia" data-nav="experiencia">Experiencia</a>
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="portafolio.html" data-nav="portafolio">Portafolio</a>
+			<a class="nav-link font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200"
+			   href="index.html#contacto" data-nav="contacto">Contacto</a>
+			<button aria-label="Toggle Dark Mode"
+			        class="text-primary hover:text-secondary transition-colors focus:outline-none" id="theme-toggle">
+				<span class="material-symbols-outlined hidden dark:block" id="theme-toggle-light-icon">light_mode</span>
+				<span class="material-symbols-outlined block dark:hidden" id="theme-toggle-dark-icon">dark_mode</span>
+			</button>
+			<a href="./assets/cv/CV-BastianVargas.pdf" download="CV-BastianVargas.pdf">
+			<button class="hidden md:flex items-center justify-center bg-primary text-on-primary px-4 py-2 rounded font-label-md text-label-md hover:bg-primary-container soft-transition cursor-pointer transition-transform active:scale-95">
+				Descargar CV
+			</button>
+			</a>
+		</div>
+		<!-- Mobile Menu Button -->
+		<div class="md:hidden flex items-center gap-4 z-50 relative">
+			<button aria-label="Toggle Dark Mode Mobile"
+			        class="text-primary hover:text-secondary transition-colors focus:outline-none"
+			        id="theme-toggle-mobile">
+				<span class="material-symbols-outlined hidden dark:block"
+				      id="theme-toggle-light-icon-mobile">light_mode</span>
+				<span class="material-symbols-outlined block dark:hidden"
+				      id="theme-toggle-dark-icon-mobile">dark_mode</span>
+			</button>
+			<button aria-label="Menu" class="text-primary" id="mobile-menu-btn">
+				<span class="material-symbols-outlined" id="mobile-menu-icon"
+				      style="font-variation-settings: 'FILL' 0;">menu</span>
+			</button>
+		</div>
+	</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-40 bg-surface md:hidden flex flex-col items-center justify-center gap-8 px-gutter pt-20 pb-8 pointer-events-none"
+     id="mobile-menu">
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="index.html#inicio" data-nav="inicio">Inicio</a>
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="index.html#sobre-mi" data-nav="sobre-mi">Sobre mí</a>
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="index.html#educacion" data-nav="educacion">Educación</a>
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="index.html#experiencia" data-nav="experiencia">Experiencia</a>
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="portafolio.html" data-nav="portafolio">Portafolio</a>
+	<a class="mobile-link nav-link font-headline-lg text-headline-lg-mobile text-on-surface-variant hover:text-primary transition-colors duration-200"
+	   href="index.html#contacto" data-nav="contacto">Contacto</a>
+	<button class="flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded font-label-md text-label-md hover:bg-primary-container soft-transition cursor-pointer w-full max-w-[200px]">
+		Descargar CV
+	</button>
+</div>
