@@ -2,7 +2,7 @@
 
 Sitio web personal de **Bastián Vargas Parrao**, Desarrollador Fullstack JavaScript. Funciona como CV interactivo y portafolio de proyectos, con soporte para modo claro/oscuro, formulario de contacto funcional y una sección de portafolio filtrable por tecnología.
 
-🔗 **Demo:** https://bastianvargasp.github.io
+🔗 **Demo:** https://bastianvargasp.github.io/nuevo-cv
 
 ## 👤 Sobre mí (resumen del CV)
 
