@@ -5,6 +5,7 @@ document.addEventListener('partials:loaded', () => {
     initThemeToggle();
     initContactForm();
     initMobileMenu();
+    initPortfolioFilter();
 });
 
 // Resalta el enlace de nav correspondiente a la sección visible (solo en index.html)
@@ -183,14 +184,6 @@ function initMobileMenu() {
         });
     });
 }
-
-document.addEventListener('partials:loaded', () => {
-    initScrollSpy();
-    initThemeToggle();
-    initContactForm();
-    initMobileMenu();
-    initPortfolioFilter();
-});
 
 // Filtra las tarjetas del portafolio por tecnología (solo existe en portafolio.html)
 function initPortfolioFilter() {
