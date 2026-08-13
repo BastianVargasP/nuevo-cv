@@ -22,7 +22,7 @@
 <div id="site-header"></div>
 <main class="">
 	<!-- Portafolio Section -->
-	<section class="bg-surface-container-low py-section-gap" id="portafolio">
+	<section class="bg-surface-container-low pt-section-gap" id="portafolio">
 		<div class="max-w-max-width mx-auto px-margin-mobile md:px-gutter">
 			<div class="text-center mb-12">
 				<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
@@ -30,11 +30,24 @@
 				<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Una selección de mis
 					proyectos más recientes, destacando soluciones frontend y backend.</p>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<!-- Filtros de tecnología -->
+			<div class="flex flex-wrap justify-center gap-3 mb-10" id="portfolio-filters">
+				<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md soft-transition bg-primary text-on-primary"
+				        data-filter="all">Ver todos</button>
+				<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md soft-transition bg-surface-container-lowest text-on-surface-variant border border-outline-variant/40 hover:bg-surface-container"
+				        data-filter="react">React</button>
+				<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md soft-transition bg-surface-container-lowest text-on-surface-variant border border-outline-variant/40 hover:bg-surface-container"
+				        data-filter="html-css">HTML/CSS</button>
+				<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md soft-transition bg-surface-container-lowest text-on-surface-variant border border-outline-variant/40 hover:bg-surface-container"
+				        data-filter="javascript">JavaScript</button>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
 				<!-- Project 1 -->
-				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
+				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20 group"
+				     data-tech="html-css javascript">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover"
+						<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 						     data-alt="A clean, modern dashboard interface design displayed on a sleek laptop screen. The UI features data visualizations, charts, and a sidebar navigation menu in a light mode theme with teal accents. Professional corporate aesthetic, high resolution."
 						     src="./assets/img/covid.png"/>
 					</div>
@@ -52,9 +65,10 @@
 					</div>
 				</div>
 				<!-- Project 2 -->
-				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
+				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20 group"
+				     data-tech="html-css javascript react">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover"
+						<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 						     data-alt="A mobile app interface design showing a task management application. Clean, minimalist screens featuring lists, checkmarks, and progress bars. Light mode with soft blue and green accents. Displayed on a modern smartphone mockup. Professional tech aesthetic."
 						     src="./assets/img/weatherApp.png"/>
 					</div>
@@ -72,9 +86,10 @@
 					</div>
 				</div>
 				<!-- Project 3 -->
-				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20">
+				<div class="bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-hover soft-transition flex flex-col h-full border border-outline-variant/20 group"
+				     data-tech="html-css javascript">
 					<div class="h-48 w-full relative overflow-hidden bg-surface-variant">
-						<img class="w-full h-full object-cover"
+						<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 						     data-alt="A mobile app interface design showing a task management application. Clean, minimalist screens featuring lists, checkmarks, and progress bars. Light mode with soft blue and green accents. Displayed on a modern smartphone mockup. Professional tech aesthetic."
 						     src="./assets/img/extensiones.png"/>
 					</div>

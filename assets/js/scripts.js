@@ -183,3 +183,45 @@ function initMobileMenu() {
         });
     });
 }
+
+document.addEventListener('partials:loaded', () => {
+    initScrollSpy();
+    initThemeToggle();
+    initContactForm();
+    initMobileMenu();
+    initPortfolioFilter();
+});
+
+// Filtra las tarjetas del portafolio por tecnología (solo existe en portafolio.html)
+function initPortfolioFilter() {
+    const filterButtons = document.querySelectorAll('#portfolio-filters .filter-btn');
+    const projects = document.querySelectorAll('#portfolio-grid [data-tech]');
+    if (!filterButtons.length || !projects.length) return;
+
+    const activeClasses = ['bg-primary', 'text-on-primary'];
+    const inactiveClasses = ['bg-surface-container-lowest', 'text-on-surface-variant', 'border', 'border-outline-variant/40'];
+
+    function setActiveButton(activeBtn) {
+        filterButtons.forEach(btn => {
+            btn.classList.remove(...activeClasses);
+            btn.classList.add(...inactiveClasses);
+        });
+        activeBtn.classList.remove(...inactiveClasses);
+        activeBtn.classList.add(...activeClasses);
+    }
+
+    function applyFilter(filter) {
+        projects.forEach(project => {
+            const techs = project.dataset.tech.split(' ');
+            const matches = filter === 'all' || techs.includes(filter);
+            project.classList.toggle('hidden', !matches);
+        });
+    }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            setActiveButton(btn);
+            applyFilter(btn.dataset.filter);
+        });
+    });
+}
